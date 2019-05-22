@@ -20,7 +20,7 @@ class Student
       WHERE ? = Students.name
     SQL
 
-    db:[:conn]
+    DB[:conn].execute(sql).map
   end
   
   def save
