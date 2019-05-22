@@ -12,7 +12,10 @@ class Student
   end
 
   def self.all
-    sql
+    sql = <<-SQL
+      SELECT *
+      FROM Students
+    SQL
   end
 
   def self.find_by_name(name)
